@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Rock Paper Scissors</h1>
+        <div id="login">
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="register()">Join Game</button>
+        </div>
+        <div id="choices" style="display: none;">
+            <button onclick="makeChoice('rock')">Rock</button>
+            <button onclick="makeChoice('paper')">Paper</button>
+            <button onclick="makeChoice('scissors')">Scissors</button>
+        </div>
+        <div id="status">
+            <h2>Waiting for other player...</h2>
+        </div>
+        <div id="result"></div>
+        <div id="scoreboard"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
